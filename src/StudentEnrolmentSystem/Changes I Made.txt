@@ -1,0 +1,2 @@
+So i deleted the student class cause we arent gonna need it, and for testing purposes I added my User class (User_1) so we know what we are working with. look through the DAO 
+class and see all the comments i made above each method.
