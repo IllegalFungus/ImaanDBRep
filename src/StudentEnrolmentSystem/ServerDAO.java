@@ -143,7 +143,7 @@ public Course getCourse(Course course){
 }
 
 //Should be a void method, i.e. there shouldnt be a return method.
-public User deleteUser(User user){
+public void User deleteUser(User user){
     String query = "DELETE FROM  Admin WHERE UserID = ?";
     try(PreparedStatement stmt = connection.prepareStatement(query)){
         stmt.setString(1, user.getUserID());
@@ -151,11 +151,10 @@ public User deleteUser(User user){
     } catch(SQLException e){
         e.printStackTrace();
     }
-    return null;
 }
 
 //Should be a void method, i.e. there shouldnt be a return method.
-public User deleteCourse(Course course){
+public void User deleteCourse(Course course){
     String query = "DELETE FROM Courses WHERE Course_Code = ?";
     try(PreparedStatement stmt = connection.prepareStatement(query)){
         stmt.setString(1, course.getCourseID());
@@ -163,7 +162,6 @@ public User deleteCourse(Course course){
     } catch(SQLException e){
         e.printStackTrace();
     }
-    return null;
 }
 
 //Need an enroll course, that takes both a User object and a course object.
